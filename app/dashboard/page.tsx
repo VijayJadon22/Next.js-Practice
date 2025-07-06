@@ -1,21 +1,10 @@
-// "use client";
-const DashboardPage = () => {
-  async function sayHello(params: any) {
-    "use server";
-    console.log("Hello");
-    console.log(params);
-  }
+import { NextPage } from "next";
 
-  console.log("Hey there");
+const DashboardPage: NextPage = () => {
   return (
-    <>
-      <h1>This is Dashboard Page</h1>
-      <form action={sayHello}>
-        <input type="text" placeholder="text" name="name"/>
-        <button>Submit</button>
-      </form>
-    </>
+    <div>
+      <h1 className="text-2xl font-bold">I am a Dashboard Page</h1>
+    </div>
   );
 };
-
 export default DashboardPage;
